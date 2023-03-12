@@ -33,13 +33,13 @@ body {
 }
 
 .img {
-    width: 250px;
+    width: 20em;
     height: 0px;
     transition: all 0.7s ;
 }
 
 .main {
-    width:500px;
+    width:60%;
     margin:40px auto;
 }
 
@@ -62,11 +62,20 @@ transition: color 0.5s;
     margin-bottom: 10px;
 overflow: hidden;
 transition:0.7s all;
+cursor: pointer;
+}
+
+.des:hover  {
+    display: flex;
+    justify-content: center;
 }
 
 
+.des:hover  .img{
+    height: 250px ;
+}
     .title:hover + .des   {
-        display: block;
+
         display: flex;
         justify-content: center;
 
@@ -110,34 +119,32 @@ transition:0.7s all;
     content: "+";
     display: block;
    font-size: 25px;
-
+transition:all 0.7s;
 }
 
     @media screen and (max-width: 820px) {
    .title {
 font-size: 25px;
 }
-
-        .main {
-            width:400px;
-            margin:40px auto;
-        }
+.main {
+    width:80%
+}
     }
 
     
     @media screen and (max-width: 570px) {
 
-        .main {
-            width:270px;
-            margin:40px auto;
-        }
-        
         .img {
-            width: 230px;
-            height: 230px;
+            width: 15em;
+
         }
+       
         .title {
             font-size: 25px;
+            }
+
+            .main {
+                width:80%
             }
     }
 
