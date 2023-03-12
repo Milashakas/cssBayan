@@ -21,7 +21,7 @@ body {
 
 .memecontanier {
     border-bottom:1px solid rgba(255, 255, 255, 0.529);
-    
+    transition: all 0.7px;
 }
 
 .maintitle {
@@ -34,7 +34,8 @@ body {
 
 .img {
     width: 250px;
-    height: 250px;
+    height: 0px;
+    transition: all 0.7s ;
 }
 
 .main {
@@ -45,6 +46,7 @@ body {
 .title {
     font-size: 20px;
 margin:10px;
+margin-bottom: 0px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -55,11 +57,11 @@ transition: color 0.5s;
 
 
 .des {
-   
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
 overflow: hidden;
-
-display: none;
+transition:0.7s all;
 }
 
 
@@ -67,12 +69,13 @@ display: none;
         display: block;
         display: flex;
         justify-content: center;
-      
+
         }
 
+   
         .title:hover::after   {
             transform: rotate(45deg);
-            transition: transform 0.5s;
+
             }
     
     .inp {
@@ -84,23 +87,30 @@ display: none;
     .inp:checked ~ .des {
         display: flex;
         justify-content: center;
+
+    }
+    .inp:checked ~ .des .img {
+   height: 250px;
     }
     .inp:checked ~ .title {
-        color: rgba(178, 60, 34, 0.711);
+        color: rgba(197, 46, 19, 0.711);
     }
     .inp:checked ~ .title::after {
        transform: rotate(45deg);
-       transition: transform 0.5s;
+  
     }
     .memes:hover  {
-        color:rgba(178, 60, 34, 0.711);
+        color:rgba(197, 46, 19, 0.711);
+    }
+    .title:hover + .des .img{
+        height: 250px ;
     }
 
 .memes:hover .title::after {
     content: "+";
     display: block;
    font-size: 25px;
-   transition: transform 0.5s;
+
 }
 
     @media screen and (max-width: 820px) {
